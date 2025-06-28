@@ -6,7 +6,7 @@ export default async function Header (){
 
     const {userId} = await auth()
 
-    console.log(userId)
+    // console.log(userId)
 
     return (
         <>

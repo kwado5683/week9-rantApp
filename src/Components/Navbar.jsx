@@ -14,8 +14,8 @@ export default function Navbar() {
 
                 <div>
                     <ul className="display-flex">
-                        <Link href={"/Posts"}> login</Link>
-                        <Link href={"/Posts"}> Create Account</Link>
+                        <Link href={"/WelcomePage"}> login</Link>
+                        <Link href={"/CreateProfile"}> Create Account</Link>
                     </ul>
                 </div>
 
