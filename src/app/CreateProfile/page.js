@@ -4,7 +4,7 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { db } from "@/utils/dbConnection";
 import { redirect } from "next/navigation";
 
-// ✅ Server action
+
 export async function handleSubmit(formData) {
   "use server";
 
@@ -13,13 +13,13 @@ export async function handleSubmit(formData) {
 
   const name = formData.get("name");
 
-  // 🛡 Guard: make sure user is logged in
+  
   if (!userId || !user) {
     console.log("User not found or not authenticated");
     return;
   }
 
-  // 🔍 Check if the user already exists
+
   const existing = await db.query(
     "SELECT * FROM userprofile WHERE clerk_userid = $1",
     [userId]
@@ -35,10 +35,10 @@ export async function handleSubmit(formData) {
     console.log("User already exists, skipping insert");
   }
 
-  redirect("/"); // ✅ Redirect only after success
+  redirect("/Welcome"); 
 }
 
-// ✅ Server component
+
 export default function CreateProfile() {
   return (
     <main className="p-6 max-w-md mx-auto">
