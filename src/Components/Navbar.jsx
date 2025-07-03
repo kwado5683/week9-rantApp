@@ -6,16 +6,17 @@ export default function Navbar() {
 
 
             <div>
-                <h1> Rants</h1>
+                <Link href={"/"}>Rants</Link>
 
-                <div>
-                    <h1>HomePage</h1>
+                <div className="">
+                    <Link href={"/"}>HomePage</Link>
+                    <Link href={"/Feeds"}>Feeds</Link>
                 </div>
 
                 <div>
                     <ul className="display-flex">
-                        <Link href={"/WelcomePage"}> login</Link>
-                        <Link href={"/CreateProfile"}> Create Account</Link>
+                        {/* <Link href={"/Feeds"}> login</Link> */}
+                        {/* <Link href={"/CreateProfile"}> Create Account</Link> */}
                     </ul>
                 </div>
 
